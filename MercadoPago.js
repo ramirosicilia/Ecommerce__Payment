@@ -54,10 +54,10 @@ app.post('/create_preference', async (req, res) => {
                 name: item.name,
                 quantity: item.quantity,
                 unit_price: item.unit_price,
-                picture_url: `http://localhost:2000/create_preference${item.imagen}`  // Añadir la URL completa de la imagen desde localhost
+                /*picture_url: `http://localhost:2000/create_preference${item.imagen}`  // Añadir la URL completa de la imagen desde localhost*/
 
             })),  
-            notification_url: "http://localhost:2000/receive_payment",
+            notification_url: "https://personaldegastronomia.com",
             back_urls: {
                 success:"https://personaldegastronomia.com/",
                 failure:"https://personaldegastronomia.com/",
