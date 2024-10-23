@@ -36,7 +36,7 @@ const preference = new Preference(client)
 app.get("/receive_payment", async (req, res) => {
     try {
       const query_params = req.query;
-      res.status(200).json({ query_params });
+      res.status(200).json({ok:true });
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
@@ -58,6 +58,7 @@ app.post('/create_preference', async (req, res) => {
 
             })),  
             notification_url: "https://personaldegastronomia.com",
+
             back_urls: {
                 success:"https://personaldegastronomia.com/",
                 failure:"https://personaldegastronomia.com/",
